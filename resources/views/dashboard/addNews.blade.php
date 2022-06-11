@@ -63,12 +63,15 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/signout">
+          <a class="nav-link text-white " href="{{ route('adminlogout') }}" onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-
               <i class="material-icons opacity-10">login</i>
             </div>
             <span class="nav-link-text ms-1">Sign out</span>
+            <form id="logout-form" action="{{ route('adminlogout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </a>
         </li>
       </ul>
@@ -78,7 +81,8 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
-          <h6 class="font-weight-bolder mb-0">News</h6>
+
+          <h6 class="font-weight-bolder mb-0">Dashboard</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -86,16 +90,12 @@
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-                <span class="d-sm-inline d-none">{{Auth::user()->name}}</span>
+              <a href="{{ route('adminlogout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Sign out</span>
+                <span class="d-sm-inline d-none">Sign Out</span>
               </a>
             </li>
-          </ul>
-            </li>
-          </ul>
-        </div>
       </div>
     </nav>
     <!-- End Navbar -->
