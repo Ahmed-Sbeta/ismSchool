@@ -149,8 +149,8 @@
         <!-- End Navbar Area -->
 
         <!-- Start Page Banner -->
-        <div class="page-banner-area" >
-            <div class="d-table">
+        <div class="page-banner-area" style="background-image:url(assets/img/contact-us1.jpg);">
+             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="page-banner-content">
@@ -230,7 +230,7 @@
 
                             <h3>Our Branch:</h3>
                             <ul >
-                                <li><span>Hay-Alandalus Branch :</span>academic@ismschool.com</li>
+                                <li><span>Hay-Alandalus Branch :</span>info@ismschool.com</li>
                                 <li><span>Janzur Branch :</span> principal@janzur.ism.ly</li>
                                 <li><span>Gurgi Branch :</span> academic@gurgi.ism.ly</li>
 
