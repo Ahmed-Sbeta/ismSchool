@@ -136,8 +136,8 @@
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">Full Name</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">phoneNumber</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date of birth</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">date & time</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center">Date of birth</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">registration Date & time</th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
@@ -163,8 +163,9 @@
                         <p class="text-xs font-weight-bold mb-0 text-center">{{$applicant->dob}}</p>
                         <p class="text-xs text-secondary mb-0"></p>
                       </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs text-center font-weight-bold">{{$applicant->created_at}}</span>
+            
+                      <td class="align-end text-center">
+                        <span class="text-secondary text-xs font-weight-bold">{{$applicant->created_at}}</span>
                       </td>
                       <td class="align-middle">
                         <a href="{{asset(Storage::url($applicant->file))}}" data-fancybox="gallery" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
