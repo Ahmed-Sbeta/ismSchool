@@ -126,7 +126,7 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">apllicants table</h6>
+                <h6 class="text-white text-capitalize ps-3">apllicants {{$applicants->count()}}</h6>
               </div>
             </div>
             <div class="card-body px-0 pb-2">
@@ -137,6 +137,7 @@
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-6">Full Name</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">phoneNumber</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date of birth</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center">date & time</th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>
@@ -158,8 +159,12 @@
                         <p class="text-xs font-weight-bold mb-0">{{$applicant->phoneNumber}}</p>
                         <p class="text-xs text-secondary mb-0"></p>
                       </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0 text-center">{{$applicant->dob}}</p>
+                        <p class="text-xs text-secondary mb-0"></p>
+                      </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">{{$applicant->dob}}</span>
+                        <span class="text-secondary text-xs text-center font-weight-bold">{{$applicant->created_at}}</span>
                       </td>
                       <td class="align-middle">
                         <a href="{{asset(Storage::url($applicant->file))}}" data-fancybox="gallery" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">

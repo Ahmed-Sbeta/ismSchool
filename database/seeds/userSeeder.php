@@ -20,5 +20,12 @@ class userSeeder extends Seeder
       DB::table('registrations')->insert([
         'status' => NULL
       ]);
+
+      DB::table('applicants')->insert([
+        'name' => 'test',
+        'phoneNumber' => '0920000000',
+        'dob' => '2001-1-1',
+        'seen' => 1
+      ]);
     }
 }

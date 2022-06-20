@@ -123,7 +123,7 @@
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">total applicants</p>
-                <h4 class="mb-0">{{$applicants_num}}</h4>
+                <h4 class="mb-0">{{$applicants_num-1}}</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
@@ -207,12 +207,12 @@
                     <li class="list-group-item border-0 px-0">
                       <div class="form-check form-switch ps-0">
                         @if($registration->status == "on")
-                          <input class="form-check-input ms-auto" type="checkbox" name="registration" id="flexSwitchCheckDefault" checked>
+                          <input class="form-check-input ms-auto mb-3" type="checkbox" name="registration" id="flexSwitchCheckDefault" checked>
                         @else
-                          <input class="form-check-input ms-auto" type="checkbox" name="registration" id="flexSwitchCheckDefault">
-
+                          <input class="form-check-input ms-auto mb-4" type="checkbox" name="registration" id="flexSwitchCheckDefault">
                         @endif
-                        <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="flexSwitchCheckDefault">Registration</label>
+                        <input class=" mt-5 form-control border text-center" type="number" name="number" placeholder="{{$registration->number}}" value="" required>
+                        <label class="text-body text-truncate w-80 mb-0">number of applicants to accept</label>
                       </div>
                     </li>
                   </ul>

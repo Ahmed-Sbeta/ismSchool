@@ -16,6 +16,7 @@ class CreateRegistrationsTable extends Migration
         Schema::create('registrations', function (Blueprint $table) {
             $table->id();
             $table->string('status')->nullable()->default(NULL);
+            $table->integer('number')->nullable()->default(0);
             $table->timestamps();
         });
     }

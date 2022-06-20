@@ -44,19 +44,28 @@ class MainController extends Controller
     }
 
     public function Apply(){
+      $registration = registration::first();
+      $first_reg = applicants::first();
+      if($first_reg->seen > $registration->number){
+        return redirect('/Registration')->with('success','Thank you for your interest in ISM international School ,Unfortunately we reached the maximum number of requests.');
+      }else{
+      $first_reg->seen = $first_reg->seen+1;
+      $first_reg->save();
       $applicant = new applicants;
       $applicant->name = request('name');
       $applicant->phoneNumber = request('phoneNumber');
       $applicant->dob = request('dob');
       $applicant->file = request()->file('file') ? request()->file('file')->store('public') : null;
       $applicant->save();
-      return redirect('/Registration')->with('success','Registered successfully , Thank you !');
-
+      return redirect('/Registration')->with('success','Thank you for your interest in ISM international School , your details have been logged ,Please note that we will be in contact with you to organise an interview and placement assessment if we have availability. Registering does not guarantee placement with ISM international School.');
+      }
     }
 
     public function checkRegistration(){
+      $number = request('number');
       $registration = registration::first();
       $registration->status = request('registration');
+      $registration->number = $registration->number+$number;
       $registration->save();
       return redirect()->back()->with('success','registration status changed');
 

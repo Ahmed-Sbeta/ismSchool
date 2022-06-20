@@ -115,23 +115,22 @@
       </div>
       @endif
     <div class="container">
-      <form class="form-control" action="{{route('addNews')}}" method="post" enctype="multipart/form-data">
+      <form class="form-group" action="{{route('addNews')}}" method="post" enctype="multipart/form-data">
         @csrf
         <label for="" class="col-1">Title</label>
-        <input type="text" name="title" class="col-6" value="">
-        <br>
+        <input type="text" name="title" class="form-control border border-dark p-2" value="">
         <label for="" class="col-1">Date</label>
-        <input type="date" name="date"  class="col-6" value="">
-        <br>
+        <input type="date" name="date"  class="col-6 form-control border border-dark p-2" value="">
         <label for="" class="col-1 float-start">text</label>
-        <textarea name="text" class="col-9" rows="8" cols="80"></textarea>
-        <br>
+        <textarea name="text" class="col-9 form-control border border-dark p-2" rows="8" cols="80"></textarea>
         <label for="" class="col-1">image</label>
-        <input type="file" class="col-6" name="image" value="">
-        <button type="submit" class="float-end btn btn-outline-primary btn-sm mb-0" name="button">Publish</button>
+        <input type="file" class="col-6 form-control border border-dark p-2" name="image" value="">
+        <button type="submit" class="float-end btn btn-outline-primary btn-sm mt-3 " name="button">Publish</button>
       </form>
     </div>
     </div>
+    <br>
+    <br>
     <footer class="footer py-4  ">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-lg-between">

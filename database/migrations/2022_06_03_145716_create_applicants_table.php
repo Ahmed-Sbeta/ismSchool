@@ -19,7 +19,7 @@ class CreateApplicantsTable extends Migration
             $table->string('phoneNumber');
             $table->date('dob');
             $table->string('file')->nullable();
-            $table->boolean('seen')->default(False);
+            $table->integer('seen')->default(0);
             $table->timestamps();
         });
     }

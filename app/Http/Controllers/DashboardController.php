@@ -18,7 +18,7 @@ class DashboardController extends Controller
     }
 
     public function table(){
-      $applicants=applicants::latest()->get();
+      $applicants = applicants::where('id', '!=', 1)->latest()->get();
       return view('dashboard.tables',compact('applicants'));
     }
 
