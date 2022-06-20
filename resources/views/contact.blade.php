@@ -86,12 +86,14 @@
                                         About
                                     </a>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <a href="/Admissions" class="nav-link active">
-                                        Admissions
-                                    </a>
 
-                                </li> -->
+                               <li class="nav-item">
+                                        <a href="gallery.html" class="nav-link">
+                                            Gallery
+                                        </a>
+    
+                                    </li>
+
 
 
 
