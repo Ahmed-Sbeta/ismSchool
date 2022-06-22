@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','MainController@index');
 Route::get('/about','MainController@about');
 Route::get('/blog','MainController@blog');
+Route::get('/blog-details/{id}','NewsController@view');
 Route::get('/contact','MainController@contact');
+Route::get('/gallery','MainController@gallery');
 Route::get('/admissions','MainController@admissions');
 Route::get('/Registration','MainController@registration');
 Route::post('/register','MainController@apply')->name('apply');
@@ -41,6 +43,12 @@ Route::post('/addNews','NewsController@addNews')->name('addNews');
 Route::get('/editNews/{id}','NewsController@editNews');
 Route::patch('/updateNews/{id}','NewsController@updateNews')->name('updateNews');
 Route::get('/deleteNews/{id}','NewsController@deleteNews');
+
+Route::get('/dashboard/addImage','DashboardController@gallery')->middleware('auth');
+Route::post('/dashboard/addImage','DashboardController@addImage')->name('addImage');
+Route::get('/dashboard/gallery','DashboardController@view')->middleware('auth');
+Route::get('/deleteImage/{id}','DashboardController@deleteImage')->middleware('auth');
+
 
 
 

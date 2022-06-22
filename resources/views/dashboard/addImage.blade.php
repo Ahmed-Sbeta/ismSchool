@@ -52,7 +52,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="/dashboard/news">
+          <a class="nav-link text-white " href="/dashboard/news">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
@@ -60,7 +60,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="/dashboard/gallery">
+          <a class="nav-link text-white active bg-gradient-primary" href="/dashboard/gallery">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -108,62 +108,31 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid px-2 px-md-4">
-      <div class="row">
-        <div class="row">
-          <div class="col-12 mt-4">
-            <div class="mb-5 ps-3">
-              <a href="/dashboard/addNews">
-              <button type="button" name="button" class="btn btn-outline-primary btn-sm mb-0 float-end">add New</button>
-              </a>
-              <p class="text-sm">Latest News</p>
-            </div>
-            @if (count($errors) > 0)
-            <div class = "alert alert-danger">
-              <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-              </ul>
-            </div>
-            @endif
-            @if(session()->has('success'))
-            <div class="alert alert-success">
-              {{ session()->get('success') }}
-            </div>
-            @endif
-            <div class="row ">
-              @foreach($news as $new)
-              <div class="col-xl-3 col-md-6 mb-xl-0 mt-4">
-                <div class="card card-blog card-plain">
-                  <div class="card-header p-0 mt-n4 mx-3">
-                    <a class="d-block shadow-xl border-radius-xl">
-                      <img src="{{asset(Storage::url($new->image))}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                    </a>
-                  </div>
-                  <div class="card-body p-3">
-                    <p class="mb-0 text-sm">creator : {{$new->creator}}</p>
-                    <a href="javascript:;">
-                      <h5>
-                        {{$new->title}}
-                      </h5>
-                    </a>
-                    <p class="mb-4 text-sm" style="height:20px; overflow: hidden;">
-
-                      {{$new->text}}
-                    </p>
-                    <div class="d-flex align-items-center justify-content-between">
-                      <a href="/editNews/{{$new->id}}" class="btn btn-outline-info btn-sm mb-0">edit</a>
-                      <a href="/deleteNews/{{$new->id}}" class="btn btn-outline-danger btn-sm mb-0">delete</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              @endforeach
-            </div>
-          </div>
-        </div>
+      @if (count($errors) > 0)
+      <div class = "alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
       </div>
+      @endif
+      @if(session()->has('success'))
+      <div class="alert alert-success">
+        {{ session()->get('success') }}
+      </div>
+      @endif
+    <div class="container">
+      <form class="form-group" action="{{route('addImage')}}" method="post" enctype="multipart/form-data">
+        @csrf
+        <label for="" class="col-1">image</label>
+        <input type="file" class="col-6 form-control border border-dark p-2" name="image" value="">
+        <button type="submit" class="float-end btn btn-outline-primary btn-sm mt-3 " name="button">Publish</button>
+      </form>
     </div>
+    </div>
+    <br>
+    <br>
     <footer class="footer py-4  ">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-lg-between">

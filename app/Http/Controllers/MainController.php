@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\applicants;
 use App\registration;
 use App\news;
+use App\gallery;
 
 class MainController extends Controller
 {
@@ -22,7 +23,14 @@ class MainController extends Controller
     public function blog(){
       $news = news::latest()->paginate(9);
       $registration = registration::first();
-      return view('blog',compact('registration','news'));
+      return view('news',compact('registration','news'));
+    }
+
+    public function gallery(){
+      $images = gallery::all();
+      $registration = registration::first();
+
+      return view('gallery',compact('registration','images'));
     }
 
     public function contact(){

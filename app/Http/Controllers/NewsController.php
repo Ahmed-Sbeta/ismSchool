@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\news;
+use App\registration;
+
 use Auth;
 
 
@@ -46,5 +48,11 @@ class NewsController extends Controller
       $News->delete();
 
       return redirect()->back()->with('success','Post deleted successfuly');
+    }
+
+    public function view($id){
+      $news = news::find($id);
+      $registration = registration::first();
+      return view('news-details', compact('news','registration'));
     }
 }

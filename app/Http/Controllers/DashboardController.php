@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\applicants;
 use App\news;
 use App\registration;
+use App\gallery;
 
 class DashboardController extends Controller
 {
@@ -29,5 +30,30 @@ class DashboardController extends Controller
 
     public function addNews(){
       return view('dashboard.addNews');
+    }
+
+    public function gallery(){
+      return view('dashboard.addImage');
+    }
+
+    public function addImage(){
+      $image = new gallery;
+      $image->image = request()->file('image') ? request()->file('image')->store('public') : null;
+      $image->save();
+      return redirect()->back()->with('success','Published successfully');
+    }
+
+    public function view(){
+      $images = gallery::all();
+      return view('dashboard.gallery',compact('images'));
+    }
+
+    public function deleteImage($id){
+      $images = gallery::find($id);
+      // dd($image);
+      \Storage::delete($images->image);
+      $images->delete();
+
+      return redirect()->back()->with('success','Post deleted successfuly');
     }
 }

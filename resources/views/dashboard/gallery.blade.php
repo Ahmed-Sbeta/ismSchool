@@ -112,10 +112,10 @@
         <div class="row">
           <div class="col-12 mt-4">
             <div class="mb-5 ps-3">
-              <a href="/dashboard/addNews">
+              <a href="/dashboard/addImage">
               <button type="button" name="button" class="btn btn-outline-primary btn-sm mb-0 float-end">add New</button>
               </a>
-              <p class="text-sm">Latest News</p>
+              <p class="text-sm">Gallery</p>
             </div>
             @if (count($errors) > 0)
             <div class = "alert alert-danger">
@@ -132,28 +132,18 @@
             </div>
             @endif
             <div class="row ">
-              @foreach($news as $new)
+              @foreach($images as $image)
               <div class="col-xl-3 col-md-6 mb-xl-0 mt-4">
                 <div class="card card-blog card-plain">
                   <div class="card-header p-0 mt-n4 mx-3">
                     <a class="d-block shadow-xl border-radius-xl">
-                      <img src="{{asset(Storage::url($new->image))}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                      <img src="{{asset(Storage::url($image->image))}}" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
                     </a>
                   </div>
                   <div class="card-body p-3">
-                    <p class="mb-0 text-sm">creator : {{$new->creator}}</p>
-                    <a href="javascript:;">
-                      <h5>
-                        {{$new->title}}
-                      </h5>
-                    </a>
-                    <p class="mb-4 text-sm" style="height:20px; overflow: hidden;">
 
-                      {{$new->text}}
-                    </p>
                     <div class="d-flex align-items-center justify-content-between">
-                      <a href="/editNews/{{$new->id}}" class="btn btn-outline-info btn-sm mb-0">edit</a>
-                      <a href="/deleteNews/{{$new->id}}" class="btn btn-outline-danger btn-sm mb-0">delete</a>
+                      <a href="/deleteImage/{{$image->id}}" class="btn btn-outline-danger btn-sm mb-0">delete</a>
                     </div>
                   </div>
                 </div>
