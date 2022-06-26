@@ -180,7 +180,7 @@
 
                         <div class="who-we-are-content">
                             <span>About</span>
-                            <h3>I.S.M International School Of Martyrs/h3>
+                            <h3>I.S.M International School Of Martyrs </h3>
                             <p style="text-align: justify;">ISM International School first opened in 1954 as the Oil Companies
                                 School, a school for the children of oil company executives and
                                 diplomats posted to Libya. ISM is the oldest international school in
