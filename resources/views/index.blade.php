@@ -342,26 +342,7 @@
 
         </section>
         <!-- End vision and mission area -->
-        <br>
-        <div class="container">
-            <div class="section-title">
-                <span>Our Nationalities: </span>
-            </div>
-        <div class="row" style="justify-content:space-around; margin: 50px;--bs-gutter-x:0rem;">
-            <div class="col-xs-12 col-md-3" style="height: 125px;width: 125px;">
-                <img src="{{asset('assets/img/flags-home/amr.png')}}" alt="AmericanFlag">
-            </div>
-            <div class="col-xs-12 col-md-3" style="height:150وpx; width:150px;">
-                <img src="{{asset('assets/img/flags-home/egy.png')}}" alt="AmericanFlag">
-            </div>
-            <div class="col-xs-12 col-md-3" style="height: 142px;width: 142px;">
-                <img src="{{asset('assets/img/flags-home/grm.png')}}" alt="GermanFlag">
-            </div>
-            <div class="col-xs-12 col-md-3" style="height: 125px;width: 125px;">
-                <img src="{{asset('assets/img/flags-home/fr1.png')}}" alt="franceFlag">
-            </div>
-        </div>
-    </div>
+         
 
         <!-- Start NewsArea -->
         <section class="blog-area pt-100 pb-70">
@@ -409,81 +390,67 @@
             </div>
         </section>
         <!-- End NewsArea -->
-
-
-        <section id="clients" class="section-bg">
-
+        <div class="support-area pt-100 pb-70">
             <div class="container">
-
+                
                 <div class="section-title">
-                <span style="font-size:25px ;">Our Communities: </span>
+                    <span style="font-size:25px ;">Our Communities: </span>
+                </div>
+                <ul class="support-list-item">
+                    <li>
+                        <img src="assets/img/flags-home/libya.png" alt="image">
+                        <span>Libya</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/united-kingdom.png" alt="image">
+                        <span>UK</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/amr.png" alt="image">
+                        <span>USA</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/grm.png" alt="image">
+                        <span>Germany</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/tunisia.png" alt="image">
+                        <span>Tunisia</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/iraq.png" alt="image">
+                        <span>Iraq</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/ireland.png" alt="image">
+                        <span>Ireland</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/south-africa.png" alt="image">
+                        <span>South Africa</span>
+                    </li>
+
+                    <li>
+                        <img src="assets/img/flags-home/pakistan.png" alt="image">
+                        <span>Pakistan</span>
+                    </li>
+
+                </ul>
             </div>
+        </div>
 
-              <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/united-kingdom.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-
-                    <img src="{{asset('assets/img/flags-home/egypt.png')}}" class="img-fluid" alt="">
-
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/libya.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/canada.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/iraq.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/pakistan.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/south-africa.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="{{asset('assets/img/flags-home/ireland.png')}}" class="img-fluid" alt="">
-                  </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6">
+          <!-- <div class="col-lg-3 col-md-4 col-xs-6">
                     <div class="client-logo">
                       <img src="{{asset('assets/img/flags-home/tunisia.png')}}" class="img-fluid" alt="">
                     </div>
-                  </div>
-
-
-
-              </div>
-
-            </div>
-
-          </section>
+                  </div> -->
 
         <!-- Start Footer Area -->
         <section class="footer-area pt-100 pb-70">
