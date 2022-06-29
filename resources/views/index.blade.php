@@ -87,10 +87,10 @@
                                 </li>
 
                                 <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">
+                                        <a href="/gallery" class="nav-link">
                                             Gallery
                                         </a>
-    
+
                                     </li>
 
 
@@ -372,35 +372,35 @@
                 </div>
 
                 <div class="row">
+                  @foreach($news as $new)
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-item">
                             <div class="blog-image">
-
-                                    <img src="{{asset('assets/img/blog/blog-1.jpg')}}" alt="image">
-
+                              <a href="/blog-details/{{$new->id}}">
+                                    <img src="{{asset(Storage::url($new->image))}}" alt="image">
+                                  </a>
                             </div>
 
                             <div class="blog-content">
                                 <ul class="post-meta">
                                     <li>
                                         <span>By Admin:</span>
-                                        <a href="#">Jack John</a>
+                                        ISM
                                     </li>
-
                                     <li>
                                         <span>Date:</span>
-                                        1 feb 2022
+                                        {{$new->date}}
                                     </li>
                                 </ul>
                                 <h3>
-                                    Happy Holidays!
+                                  <a href="/blog-details/{{$new->id}}">{{$new->title}}</a>
                                 </h3>
-                                <p style="font-size: 12px;">Our firs trimester ended and we are now looking forward to christmas break.<br>
-                                as you all know this trimester has beenextremely challenging for both teachers and students due to COVID-19</p>
+                                <p class="mb-4 text-sm" style="font-size: 12px; height:150px; overflow: hidden; overflow-wrap: break-word;">{{$new->text}}</p>
 
                             </div>
                         </div>
                     </div>
+                    @endforeach
 
 
 

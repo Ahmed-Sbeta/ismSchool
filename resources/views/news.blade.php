@@ -66,7 +66,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="/">
-                            <img src="{{asset('assets/img/logo1.  png')}}" alt="image">
+                            <img src="{{asset('assets/img/logo1.png')}}" alt="image">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -153,8 +153,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-item">
                             <div class="blog-image">
-                                <a href="#">
-                                    <img src="{{asset('assets/img/blog/blog-1.jpg')}}" alt="image">
+                                <a href="/blog-details/{{$new->id}}">
+                                    <img src="{{asset(Storage::url($new->image))}}" alt="image">
                                 </a>
                             </div>
 
