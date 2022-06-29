@@ -12,7 +12,8 @@ class MainController extends Controller
 {
     public function index(){
       $registration = registration::first();
-      return view('index',compact('registration'));
+      $news = news::latest()->take(3)->get();
+      return view('index',compact('registration','news'));
     }
 
     public function about(){

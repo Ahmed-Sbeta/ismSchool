@@ -88,10 +88,10 @@
                                 </li>
 
                                <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">
+                                        <a href="/gallery" class="nav-link">
                                             Gallery
                                         </a>
-    
+
                                     </li>
 
 
