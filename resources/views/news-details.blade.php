@@ -131,7 +131,7 @@
         <!-- End Navbar Area -->
 
         <!-- Start Page Banner -->
-        <div class="page-banner-area item-bg3">
+        <div class="page-banner-area" style="background-image:url(assets/img/news.png);">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -139,7 +139,7 @@
                             <h2>News Details</h2>
                             <ul>
                                 <li>
-                                    <a href="/">Home</a>
+                                    <a href="index.html">Home</a>
                                 </li>
                                 <li>News Details</li>
                             </ul>

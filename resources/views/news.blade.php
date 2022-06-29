@@ -66,7 +66,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="/">
-                            <img src="{{asset('assets/img/logo1.  png')}}" alt="image">
+                            <img src="{{asset('assets/img/logo1.png')}}" alt="image">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -126,7 +126,7 @@
         <!-- End Navbar Area -->
 
         <!-- Start Page Banner -->
-        <div class="page-banner-area">
+        <div class="page-banner-area" style="background-image:url(assets/img/news.png);">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -134,7 +134,7 @@
                             <h2>News</h2>
                             <ul>
                                 <li>
-                                    <a href="/">Home</a>
+                                    <a href="index.html">Home</a>
                                 </li>
                                 <li>News</li>
                             </ul>
